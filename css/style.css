@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    background: rgb(84, 98, 119);
+    padding: 5% 0;
+    
+}
+
+
+
+header .logo-img {
+    /*change the logo color reverse*/
+    filter: brightness(0) invert(1);
+    height: 90px;
+    width:auto;
+}
+
+ul{
+    background: rgb(84, 98, 119);
+    color:white;
+    list-style: none;
+    
+}
+
+li{
+    /* change the li to be inline */
+    display: inline-block;  
+    /* make space between li  */
+    padding: 10px; 
+ }
+
+header a {
+    text-decoration: none; /* get rid of underline */
+    color:white; /*change text color */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 40px;
+}
+
+
+
+/*HEADER issues: 
+1. button of donate
+2. logo fits in the nav AUG.22.2026  */ 
+/*logo fit in by setting heights 90px and width to auto 
+Aug 23 2026*/
+
+
+/* section one */
+main .section-one {
+    
+    background:rgb(84, 98, 119);
+    color:white;
+    text-align: center; /*center all the text*/
+    
+}
+
+.section-one h1{
+    /* remove space between header and section one */
+    padding-top:5%;
+    margin:0em;
+    padding-bottom: 5%;
+}
+
+.section-one h3 {
+    margin: 40px 20px;
+}
+
+.section-one h4{
+    height:80px;
+    padding-bottom: 20%;
+}
+
+/*section two*/
+.section-two {
+    background: white;
+    text-align: center;
+    margin: 0 20%;
+    /* height: 80px; */
+    padding: 10% 0 20% 0;
+}
+
+.section-two h2 {
+    padding-bottom: 5%;
+    margin: 40px 20px;
+}
+
+/*section three */
+.section-three {
+    padding: 5%;
+    background: rgb(214, 218,222);
+    display: grid;
+    /* create grid on line 103 first box one fraction and second one the 
+    same  */
+    grid-template-columns: 1fr 1fr; 
+
+    
+    /* flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; */
+    
+    /* height: 400px; */
+    /* flex:1 1 50%; */
+    
+}
+
+.section-three section {
+    text-align: center;
+}
+
+.section-three h3 {
+    padding: 5%;
+}
+
+/* img */
+.section-three img {
+    border: 2px solid gray;
+    width: 80%;
+}
+
+.section-three a {
+    padding:1% 2%;
+    border: 1px solid black;
+    text-decoration: none;
+    color:black;
+}
+
+.section-three p {
+    padding:5%;
+    
+}
+/* section four  */
+.section-four{
+    text-align: center;
+    margin: 0 20%;
+    /* height: 80px; */
+    padding: 10% 0 20% 0;
+}
+.section-four p {
+    padding:5% 0;
+}
+.section-four a {
+    padding:1% 2%;
+    border: 1px solid black;
+    text-decoration: none;
+    color:black;
+}
+
+
+.section-five{
+    background: rgb(22,29,37);
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.section-five .left, .right{
+    display: block;
+    padding: 2%;
+}
+
+.left h4{
+    color: rgb(91,107,126);
+}
+
+.left span{
+    color:white;
+}
+/* footer  */
+
+footer .logo-img {
+    /*change the logo color reverse*/
+    filter: brightness(0) invert(1);
+    height: 90px;
+    width:auto;
+    position:right;
+}
+
+footer section i{
+    height:5px;
+    padding-top:5%;
+}
+
+footer{
+    background: rgb(22,29,37);
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex:1; */
+    
+}
+
+footer .footer-last {
+    text-decoration: overline;
+
+}
+
+footer .footer-last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-last {
+    width: 100%;
+    height: 80px;
+}
+
+/*mobile BREAKPOINT */
+@media screen and (max-width: 600px){
+    #left{
+        display: none;
+    }
+    .section-five {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-last{
+        display: none;
+    }
+    /* target the logo to be at center */
+    footer .footer-last {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
+    footer .footer-last {
+    /* width: 100%; */
+    height: 80px;}
+}
+    
+
+
+
+/* mobile BREAKPOINTS */
+ @media screen and (max-width :768px)
+{
+    /*hamburger trick didnt work*/
+     /* nav li:first-child ~ li{
+          display: none;
+    } */
+    header nav {
+        display:none;
+    }
+    #donate {
+        display: none;
+    }
+    
+    main .section-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 1;
+
+    }
+
+    main .section-three >a {
+        display:none;
+    }
+
+    .section-three img {
+        display: none;
+    }
+
+    footer .footer-last p {
+        display: none;
+    }
+   
+     footer .footer-last {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
+    footer .footer-last {
+    /* width: 100%; */
+    height: 80px;}
+}
+   
+
+
+
+
+/*TABLET BREAKPOINTS*/
+ @media screen and (min-width:769px) and (max-width:1024px){
+
+     main {
+          flex:1;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          min-height: 80px;
+     }
+    /* section five becomes column */
+    main .section-five .left {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex:1;
+
+    }
+    /* target picture */
+    .section-three {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section-three section span {
+        padding-top: 10px;
+    }
+
+    /* #martial-art {
+        margin-bottom: 20px;
+    }  */
+
+}  
+
+/*desktop BREAKPOINTS*/
+@media screen and (min-width:1024px){
+     main {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          min-height: 200px;
+     }
+} 
