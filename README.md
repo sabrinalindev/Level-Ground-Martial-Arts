@@ -49,7 +49,6 @@ Level-Ground-Martial-Arts/
 
 - How to structure a webpage with semantic HTML
 - How to style a page and build a responsive layout with CSS
-- 【例如：how to use Flexbox or Grid】
 - How to organize files in a small web project
 
 
