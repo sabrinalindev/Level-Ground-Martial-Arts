@@ -1,4 +1,4 @@
-# 🥋 Level Ground Martial Arts
+# Level Ground Martial Arts
 
 A website for Level Ground Martial Arts, a martial arts school. Visitors can learn about the school, see what classes are offered, and find out how to get in touch.
 
